@@ -1,0 +1,65 @@
+/* Algemene opmaak van de body */
+body {
+    display: flex; /* Gebruik flexbox om de inhoud te centreren */
+    flex-direction: column; /* Plaats de elementen onder elkaar */
+    align-items: center; /* Centreer de inhoud horizontaal */
+    font-family: Arial, sans-serif; /* Stel het lettertype in op Arial of een alternatieve sans-serif */
+    background-color: #32cd32; /* Zet de achtergrondkleur van de pagina op groen */
+    margin: 0; /* Verwijder standaardmarges van de browser */
+    padding: 20px; /* Voeg wat ruimte toe rondom de inhoud */
+}
+
+/* Opmaak voor de titel van de pagina */
+h1 {
+    margin-bottom: 20px; /* Voeg wat ruimte onder de titel toe */
+}
+
+/* De container voor de kaarten in het spel */
+.game-container {
+    display: grid; /* Gebruik een grid-layout voor de kaarten */
+    grid-template-columns: repeat(4, 100px); /* Maak 4 kolommen van 100px breed voor de kaarten */
+    gap: 10px; /* Voeg ruimte toe tussen de kaarten */
+}
+
+/* Stijlen voor elke kaart */
+.card {
+    width: 100px; /* De breedte van de kaart */
+    height: 100px; /* De hoogte van de kaart */
+    background-color: #007bff; /* Zet de achtergrondkleur van de kaart op blauw */
+    border-radius: 8px; /* Maak de hoeken van de kaart afgerond */
+    display: flex; /* Gebruik flexbox om de inhoud van de kaart te centreren */
+    align-items: center; /* Centreer de inhoud verticaal */
+    justify-content: center; /* Centreer de inhoud horizontaal */
+    color: white; /* Zet de tekstkleur op wit */
+    font-size: 24px; /* Zet de tekstgrootte op 24px */
+    cursor: pointer; /* Maak de cursor een pointer om aan te geven dat de kaart klikbaar is */
+    user-select: none; /* Voorkom dat de gebruiker de tekst op de kaart kan selecteren */
+}
+
+/* Stijl voor een omgedraaide kaart */
+.card.flipped {
+    animation: flip 400ms 1 normal; /* Voeg een animatie toe wanneer de kaart omdraait */
+    background-color: green; /* Verander de achtergrondkleur van de kaart naar groen wanneer deze omgedraaid is */
+}
+
+/* Definieer de animatie voor het omdraaien van de kaart */
+@keyframes flip {
+    0% {
+        background-color: green; /* De beginfase van de animatie (groene achtergrond) */
+        transform: scaleX(100%) scaleY(100%); /* De kaart is volledig zichtbaar */
+    }
+    50% {
+        transform: scaleX(0%) scaleY(110%); /* De kaart lijkt in te krimpen in de breedte en uit te rekken in de hoogte */
+        background-color: green; /* De achtergrond blijft groen */
+    }
+    100% {
+        transform: scaleX(100%) scaleY(100%); /* De kaart is volledig terug op zijn originele formaat */
+        background-color: green; /* De achtergrond blijft groen */
+    }
+}
+
+/* Stijlen voor het scoreboard */
+#scoreboard {
+    font-size: 24px; /* Zet de lettergrootte van de score op 24px */
+    margin-bottom: 20px; /* Voeg wat ruimte onder het scoreboard toe */
+}

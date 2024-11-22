@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- Geeft aan dat dit een HTML5-document is -->
+<html lang="en"> <!-- De taal van de pagina is Engels -->
+<head>
+    <meta charset="UTF-8"> <!-- Stelt de tekencodering in op UTF-8 (zorgt voor correcte weergave van speciale tekens) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Zorgt ervoor dat de pagina goed schaalt op mobiele apparaten -->
+    <title>Memory Card Game</title> <!-- De titel van de pagina die bovenaan het browservenster wordt weergegeven -->
+    <link rel="stylesheet" href="style.css"> <!-- Verbindt het externe CSS-bestand voor de styling -->
+</head>
+<body>
+    <h1>Memory Card Game</h1> <!-- De hoofd titel van de pagina -->
+
+    <!-- Het scoreboard dat de scores van beide spelers en wie de beurt heeft toont -->
+    <div id="scoreboard">
+        <div>Player 1 Score: <span id="score1">0</span></div> <!-- Score van speler 1 -->
+        <div>Player 2 Score: <span id="score2">0</span></div> <!-- Score van speler 2 -->
+        <div id="currentPlayerDisplay">Player 1's turn</div> <!-- Geeft aan wie de beurt heeft -->
+    </div>
+
+    <!-- De container voor de kaarten in het spel -->
+    <div class="game-container" id="game-container">
+    </div>
+
+    <!-- Een knop om het spel opnieuw te starten -->
+    <button id="restart-button">Restart Game</button>
+
+    <!-- Het script dat de game-logica regelt wordt hier geladen -->
+    <script src="script.js"></script>
+</body>
+</html>
